@@ -3,6 +3,7 @@ import video from "@/assets/video.mp4";
 import ReactPlayer from "react-player";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import { ThemeProvider } from "./components/theme-provider";
 
 function App() {
     const [isOverlayHidden, setIsOverlayHidden] = useState(false);
@@ -12,7 +13,7 @@ function App() {
     };
 
     return (
-        <>
+        <ThemeProvider defaultTheme="system" storageKey="vite-ui-theme">
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-{calc(1200px)} h-{calc(675px)} z-0">
                 <ReactPlayer
                     url={video}
@@ -27,12 +28,10 @@ function App() {
             >
                 abc
             </div>
-            <Button
-                className="relative"
-                onClick={handleButtonClick}
-                children="Toggle overlay"
-            />
-        </>
+            <Button className="relative" onClick={handleButtonClick}>
+                Toggle Overlay
+            </Button>
+        </ThemeProvider>
     );
 }
 
