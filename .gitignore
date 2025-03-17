@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Generated videos
+focus_peaking_video.mp4
+original_video.mp4
