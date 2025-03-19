@@ -53,8 +53,8 @@ def main(config_file_path, video_file_path):
     fourcc = cv2.VideoWriter_fourcc(*'avc1')
 
     # Set up video writers
-    original_writer = cv2.VideoWriter('original_video.mp4', fourcc, fps, (width, height))
-    processed_writer = cv2.VideoWriter('focus_peaking_video.mp4', fourcc, fps, (width, height))
+    original_writer = cv2.VideoWriter('../src/assets/original_video.mp4', fourcc, fps, (width, height))
+    processed_writer = cv2.VideoWriter('../src/assets/focus_peaking_video.mp4', fourcc, fps, (width, height))
 
     threshold = int(config.get('FocusPeaking', 'Threshold'))
     blur_kernel_size = eval(config.get('FocusPeaking', 'BlurKernelSize'))
