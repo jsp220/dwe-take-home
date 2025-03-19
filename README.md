@@ -1,30 +1,40 @@
-# React + TypeScript + Vite
+# Focus Peaking App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Take Home Project for DeepWater Exploration Inc. by Joon Park
 
-Currently, two official plugins are available:
+## Approach
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This app was created with [electron-vite](https://electron-vite.org/), [Tailwind CSS](https://tailwindcss.com/), [shadcn/ui](https://ui.shadcn.com/), and a [focus-peaking algorithm from GreenpantsDeveloper](https://github.com/GreenpantsDeveloper/focus-peaking).
 
-## Expanding the ESLint configuration
+At installation, all dependencies are installed, and the video is processed with the focus peaking algorithm to produce the focus peaking overlay. When run.sh is executed, the Vite package is built, then the Electron app is built using the Vite generated files, and the resulting App will launch (Cross-platform compatible: Windows, MacOS, and Linux).
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+![Screenshot with overlay on](assets/1.png)
+![Screenshot with overlay off](assets/2.png)
 
-- Configure the top-level `parserOptions` property like this:
+-   Front end: React/TypeScript/Vite
+-   Back end: Python (algorithm runs and produces the focus peaking overlay video at installation).
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+## Instructions
+
+To run this app, you must have Python 3 and Node.js installed on your system.
+
+1. Clone this repository.
+
+```bash
+git clone https://github.com/jsp220/focus-peaking-app.git
+cd focus-peaking-app
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+2. Make the installation script executable then run it.
+
+```bash
+chmod +x install.sh
+./install.sh
+```
+
+3. Make the run script executable then run it.
+
+```bash
+chmod +x run.sh
+./run.sh
+```
