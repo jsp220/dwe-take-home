@@ -6,13 +6,10 @@
 
 This app was created with [electron-vite](https://electron-vite.org/), [Tailwind CSS](https://tailwindcss.com/), [shadcn/ui](https://ui.shadcn.com/), and a [focus-peaking algorithm from GreenpantsDeveloper](https://github.com/GreenpantsDeveloper/focus-peaking).
 
-At installation, all dependencies are installed, and the video is processed with the focus peaking algorithm to produce the focus peaking overlay. When run.sh is executed, the Vite package is built, then the Electron app is built using the Vite generated files, and the resulting App will launch (Cross-platform compatible: Windows, MacOS, and Linux).
-
-![Screenshot with overlay on](assets/1.jpg)
-![Screenshot with overlay off](assets/2.jpg)
+At installation, all dependencies are installed, and the video is processed with the focus peaking algorithm to produce the focus peaking overlay. When run.sh is executed, the Vite package is built, then the Electron app is built using the Vite generated files, and the resulting App will launch. This app is cross-platform compatible: Windows, MacOS, and Linux.
 
 -   Front end: React/TypeScript/Vite
--   Back end: Python (algorithm runs and produces the focus peaking overlay video at installation).
+-   Back end: Python (Algorithm runs and produces the focus peaking overlay at installation)
 
 ## Instructions
 
@@ -38,3 +35,8 @@ chmod +x install.sh
 chmod +x run.sh
 ./run.sh
 ```
+
+## Screenshots
+
+![Screenshot with overlay on](assets/1.jpg)
+![Screenshot with overlay off](assets/2.jpg)
